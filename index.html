@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alarm App</title>
+<style>
+  body { font-family:sans-serif; display:flex; flex-direction:column; align-items:center; padding:20px; background:#222; color:#fff; }
+  h1 { margin-bottom: 20px; }
+  input, select, button { margin:5px; padding:8px; font-size:16px; }
+  #alarms { margin-top:20px; width:100%; max-width:400px; }
+  .alarm { display:flex; justify-content:space-between; background:#333; padding:10px; margin:5px 0; border-radius:5px; }
+  .alarm button { background:red; color:#fff; border:none; padding:5px 10px; cursor:pointer; }
+</style>
+</head>
+<body>
+
+<h1>Alarm App ⏰</h1>
+
+<div>
+  <input type="time" id="alarmTime">
+  <input type="text" id="alarmLabel" placeholder="Label">
+  <select id="alarmSound">
+    <option value="alarm1.mp3">Alarm 1</option>
+    <option value="alarm2.mp3">Alarm 2</option>
+  </select>
+  <button onclick="addAlarm()">Set Alarm</button>
+</div>
+
+<div id="alarms"></div>
+
+<audio id="alarmAudio" src="" preload="auto"></audio>
+
+<script src="alarm.js"></script>
+</body>
+</html>
